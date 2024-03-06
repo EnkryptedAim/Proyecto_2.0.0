@@ -1,0 +1,41 @@
+.h-main {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.h-hero {
+  border: 3px solid #eeff06;
+  width: 93vw;
+  height: 40vh;
+  object-fit: cover;
+}
+
+.home-top {
+  display: flex;
+  align-items: center;
+  font-family: 'Roboto Condensed', sans-serif;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  padding: 1rem;
+  margin-inline-start: 1%;
+}
+
+.discover-btn {
+  position: absolute;
+  top: 40%;
+  z-index: 1;
+  text-transform: uppercase;
+  font-family: 'Lato', sans-serif;
+  font-size: 1rem;
+  font-weight: 900;
+  padding: 0.5rem 2rem;
+  background-color: #050505;
+  border: 2.5px solid rgb(203, 248, 2);
+  transition: all 0.35s ease-in-out;
+}
+
+.discover-btn:hover {
+  color: #fbfefd;
+  background-color: rgba(34, 34, 34, 0.8);
+}

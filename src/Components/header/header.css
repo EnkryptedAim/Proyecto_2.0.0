@@ -1,0 +1,171 @@
+/* ----- HEADER ----- */
+#header {
+  position: sticky;
+  top: 0;
+  min-height: 5vh;
+  width: 100%;
+  background-color: #000000;
+  z-index: 4;
+}
+
+.header-container {
+  height: inherit;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.1rem 1.6rem;
+}
+
+.header-side {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.left-side {
+  min-width: 47%;
+}
+
+/* ----- LEFT SIDE ----- */
+
+.logo > a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo img {
+  height: 2.5rem;
+}
+
+.logo h1 {
+  text-transform: uppercase;
+  font-size: 1.75rem;
+  font-weight: 800;
+}
+
+/* ----- RIGHT SIDE ----- */
+.search-bar {
+  width: 40vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  border-radius: var(--ss-border-radius);
+  background-color: var(--ss-light-color);
+  padding: 0.1rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.search-bar .fa-magnifying-glass {
+  color: #222;
+  padding: 0.5rem;
+}
+
+#searchInput {
+  border: none;
+  background: transparent;
+  color: #222;
+  font-size: 1rem;
+  padding: 0.5rem;
+  width: 91%;
+}
+
+#searchInput:focus {
+  outline: none;
+}
+
+.fa-cart-shopping {
+  font-size: 1.3rem;
+}
+
+/* ----- NAV MENU ----- */
+.menu-list {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  z-index: 3;
+}
+
+.menu-list * {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 400;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+.nav > li > a {
+  transition: all 0.25s ease-in-out;
+}
+
+.nav > li > a:hover {
+  color: rgb(97, 97, 97);
+}
+
+.menu-btn {
+  z-index: 5;
+  display: none;
+  border: none;
+  background-color: transparent;
+  color: #fff;
+}
+
+.mobile-menu,
+.filters-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-menu * {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+/* ------ MEDIAS QUERIES ------ */
+@media screen and (max-width: 1151px) {
+  .search-bar {
+    width: 35vw;
+  }
+
+  .menu-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+
+  .nav {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .header-container {
+    flex-direction: column;
+  }
+
+  .search-bar {
+    width: 80%;
+  }
+
+  .header-side {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .logo img {
+    height: 2.2rem;
+  }
+
+  .logo h1 {
+    font-size: 1.45rem;
+  }
+}

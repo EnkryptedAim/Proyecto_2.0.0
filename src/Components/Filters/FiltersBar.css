@@ -1,0 +1,58 @@
+.filters-bar {
+  min-height: fit-content;
+  display: none;
+  align-items: center;
+  gap: 0.1rem;
+  border-top: 0.5px solid #fff;
+}
+
+.filters-bar * {
+  text-transform: uppercase;
+}
+
+#mobile-add-btn,
+#mobile-clear-btn,
+#mobile-search-btn {
+  display: none;
+}
+
+.filter-btn button {
+  border: none;
+  background-color: rgb(247, 211, 7);
+  color: #000000;
+  cursor: pointer;
+  /* padding: 1.1rem 1.6rem; */
+  padding: 0.8rem 1.6rem;
+}
+
+select {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+  margin: 0 0.8rem;
+}
+
+@media screen and (max-width: 500px) {
+  #mobile-add-btn,
+  #mobile-clear-btn,
+  #mobile-search-btn {
+    display: block;
+  }
+
+  .add-btn,
+  .clear-btn,
+  .search-btn {
+    display: none;
+  }
+
+  .filters-bar {
+    justify-content: center;
+    gap: 0;
+  }
+
+  .filter-btn button {
+    border-right: 1px solid #222;
+  }
+}

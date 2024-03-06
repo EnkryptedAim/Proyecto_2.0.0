@@ -1,0 +1,118 @@
+/* ------ NAV ------ */
+.drop-filters {
+  background-color: rgba(34, 34, 34, 1);
+  color: #fff;
+  border: 1px solid black;
+  height: fit-content;
+  padding: 1rem;
+  position: fixed;
+  height: 20rem;
+  z-index: 3;
+  overflow: scroll;
+}
+
+.drop-filters::backdrop {
+  /* background-color: hsl(250, 100%, 50%, 0.25); */
+  background-color: rgba(34, 34, 34, 0);
+}
+
+.filter-content {
+  margin-right: 0%;
+  display: block;
+  height: auto;
+  width: 80%;
+  padding: 20px;
+}
+
+#close-filters-btn {
+  color: rgb(255, 238, 0);
+  cursor: pointer;
+  margin: 0;
+}
+
+#close-filters-btn::after {
+  background-color: rgb(255, 251, 0);
+}
+
+/* ---- FILTER-LIST ---- */
+.filters-list {
+  width: auto;
+  margin: 0;
+}
+
+.filters-list > ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0.5rem;
+  gap: 0.3rem;
+  margin: 0;
+}
+
+.checkBoxBtn {
+  border: none;
+  background: transparent;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  width: 100%;
+  padding: 0 0.3rem;
+  border-radius: 0.3rem;
+}
+
+.checkBoxBtn * {
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.3rem 0;
+  text-transform: capitalize;
+}
+
+.checkBoxBtn:hover {
+  color: #c7c40c;
+  /* border: 1px solid #0CC79E; */
+}
+
+.filters-list h4 {
+  border-top: 1px solid rgb(247, 243, 2);
+  margin-top: 0.5rem;
+}
+
+.filters-list > * {
+  padding: 0.5rem;
+  text-transform: uppercase;
+}
+
+.title-filters {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title-filters > button {
+  padding: 0 0.6rem;
+}
+
+.decade-list {
+  text-transform: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.genre-list > li > button {
+  background-color: transparent;
+  border: none;
+}
+
+#min-input,
+#max-input {
+  border-radius: 0.5rem;
+  width: 4.5rem;
+  border: 2px ridge #bac70c;
+  padding: 0.25rem;
+}
