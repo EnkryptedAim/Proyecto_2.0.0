@@ -28,7 +28,7 @@
 select {
   background-color: transparent;
   border: none;
-  color: #fff;
+  color: rgb(202, 199, 5); 
   cursor: pointer;
   outline: none;
   margin: 0 0.8rem;

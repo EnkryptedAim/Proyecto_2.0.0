@@ -48,6 +48,7 @@ export const getInPriceRangeB = (products, priceMin, priceMax) => {
   return isEmpty(filteredAlbums) ? [] : filteredAlbums
 }
 
+
 export const getAlbumsGenre = (products, filtersSelected) => {
   const filteredAlbums = products.filter((album) => {
     if (filtersSelected.includes(album.genre)) {
