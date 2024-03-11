@@ -5,9 +5,7 @@ export const getInPriceRange = (products, priceMin, priceMax) => {
   const maxPrice = priceMax.value
 
   const filteredAlbums = products.filter((product) => {
-    if (!isNaN(minPrice) && !isNaN(maxPrice)) {
-      return product.price >= minPrice && product.price <= maxPrice
-    }
+    
     if (isNaN(minPrice) && !isNaN(maxPrice)) {
       return product.price <= maxPrice
     }
