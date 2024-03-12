@@ -1,51 +1,13 @@
 import { AlbumList, notFound } from '../Components/AlbumsList/AlbumsList'
 
 export const getInPriceRange = (products, priceMin, priceMax) => {
-  const minPrice = priceMin.value
-  const maxPrice = priceMax.value
+  const minPrice = parseInt(priceMin.value)
+  const maxPrice = parseInt(priceMax.value)
 
-  const filteredAlbums = products.filter((product) => {
-    
-    if (isNaN(minPrice) && !isNaN(maxPrice)) {
-      return product.price <= maxPrice
-    }
-    if (!isNaN(minPrice) && isNaN(maxPrice)) {
-      return product.price >= minPrice
-    }
-  })
-  if (!isEmpty(filteredAlbums)) {
-    return filteredAlbums
-  }
-  return products
+  const leakedProducts = products.filter ((product) => product.price > minPrice && product.price < maxPrice)
+
+  return !isEmpty(leakedProducts) ? leakedProducts : []
 }
-
-export const getInPriceRangeB = (products, priceMin, priceMax) => {
-  const minPrice = priceMin.value
-  const maxPrice = priceMax.value
-
-  const isMinPriceANumber = isNaN(minPrice)
-  console.log(minPrice)
-  console.log(isMinPriceANumber)
-  const isMaxPriceANumber = !isNaN(maxPrice)
-
-  if (!isMinPriceANumber && !isMaxPriceANumber) return products
-  const filteredAlbums = products.filter((product) => {
-    if (isMinPriceANumber && isMaxPriceANumber) {
-      console.log('1')
-      return product.price >= minPrice && product.price <= maxPrice
-    }
-    if (isMinPriceANumber && !isMaxPriceANumber) {
-      console.log('2')
-      return product.price >= minPrice
-    }
-    if (!isMinPriceANumber && isMaxPriceANumber) {
-      console.log('3')
-      return product.price <= maxPrice
-    }
-  })
-  return isEmpty(filteredAlbums) ? [] : filteredAlbums
-}
-
 
 export const getAlbumsGenre = (products, filtersSelected) => {
   const filteredAlbums = products.filter((album) => {
